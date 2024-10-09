@@ -1,7 +1,7 @@
 # Image Super Resolution
 
 ## Abstract
-In this project, we present an implementation of the Super-Resolution Convolutional Neural Network (SRCNN) using the PyTorch framework for Image Super Resolution. The SRCNN model architecture comprises multiple convolutional layers designed to learn the mapping between low-resolution and high-resolution image patches. The project workflow includes data loading and preprocessing, model definition, training loop, and evaluation on test data. Our dataset consists of pairs of low-resolution and high-resolution images, which are used to train and validate the SRCNN model. During training, Mean Squared Error (MSE) loss is minimized using the Adam optimizer. The model's performance is assessed using commonly used image quality metrics such as Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index (SSIM). Additionally, we provide visualizations of input low-resolution images, high-resolution ground truth, and model outputs to qualitatively assess the effectiveness of our approach. We demonstrate the ability of our SRCNN model to effectively enhance the visual quality of low-resolution images, showcasing its potential applications in various domains, including surveillance, medical imaging, and satellite imaging. Overall, this project contributes to the advancement of ISR techniques and provides insights into the practical implementation of deep learning models for image enhancement tasks.
+In this project, an implementation of the Super-Resolution Convolutional Neural Network (SRCNN) using the PyTorch framework for Image Super Resolution is presented. The SRCNN model architecture comprises multiple convolutional layers designed to learn the mapping between low-resolution and high-resolution image patches. The project workflow includes data loading and preprocessing, model definition, training loop, and evaluation on test data. Our dataset consists of pairs of low-resolution and high-resolution images, which are used to train and validate the SRCNN model. During training, Mean Squared Error (MSE) loss is minimized using the Adam optimizer. The model's performance is assessed using commonly used image quality metrics such as Peak Signal-to-Noise Ratio (PSNR) and Structural Similarity Index (SSIM). Additionally, visualizations of input low-resolution images, high-resolution ground truth, and model outputs to qualitatively assess the effectiveness of the approach are provided. The ability of the SRCNN model is demonstrated to effectively enhance the visual quality of low-resolution images, showcasing its potential applications in various domains, including surveillance, medical imaging, and satellite imaging. Overall, this project contributes to the advancement of ISR techniques and provides insights into the practical implementation of deep learning models for image enhancement tasks.
 
 ## Introduction
 Image Super Resolution is a fundamental task in computer vision aimed at enhancing the visual quality of low-resolution images. Applications include medical imaging, aiding early detection and diagnosis of diseases, and surveillance and security. Both applications often suffer from inadequate quality and detail, diminishing their effectiveness for detailed analysis and recognition tasks. While improving hardware can be considered, there are cost and physical limitations, making software-based enhancements such as super-resolution more practical and appealing.
@@ -11,22 +11,16 @@ Traditional approaches to image enhancement often rely heavily on manual process
 ## Problem Specification
 This project's objective is to develop a solution that enhances the resolution of blurry, low-resolution images into clearer, high-resolution images leveraging deep learning techniques.
 
-### Requirements
+### Objectives
 - The enhancement process must not distort or change the original image content.
 - The solution must be implemented using the PyTorch framework.
 - The solution must not use any pre-trained models.
 - The solution should process images in a reasonable time frame.
 
-### Constraints
-- The project is constrained by the computational resources available for training and testing the deep learning model.
-- The effectiveness of the model will depend on both the model architecture and the quality of the dataset used.
-
 ## Design Details
 
 ### Model Architecture
 For this project, the Super Resolution Convolutional Neural Network (SRCNN) architecture will be explored. The SRCNN model consists of three layers: a feature extraction layer, a non-linear mapping layer, and a reconstruction error layer.
-
-![SRCNN Architecture](link-to-your-image)
 
 The feature extraction layer extracts features from the low-resolution input image. This layer employs convolutional filters for feature extraction. The extracted features are then passed through a non-linear mapping layer to map the low-resolution feature into high-resolution features. The non-linearity of the layer captures the complex transformations for accurate super resolution, typically achieved using a ReLU activation function applied with another convolutional layer. 
 
@@ -91,8 +85,3 @@ The average performance metrics from evaluating the entire test dataset are as f
 | Average PSNR    | 16.600        |
 | Average SSIM    | 0.818         |
 
-## Conclusion 
-Through this project, we have learned the importance of data preprocessing, model architecture design, training, and evaluation for achieving high-quality super-resolved images. We observed how factors such as hyperparameters, loss functions, and optimization algorithms affect the performance of the SRCNN model. The project demonstrated the significance of quantitative metrics such as PSNR and SSIM, as well as qualitative assessment, in evaluating model performance.
-
-## References
-1. Dong, Chao, Loy, Chen Change, He, Kaiming, Tang, Xiaoou. (2014). Image Super-Resolution Using Deep Convolutional Networks. IEEE Transactions on Pattern Analysis and Machine Intelligence, 38. [DOI: 10.1109/TPAMI.2015.2439281](https://doi.org/10.1109/TPAMI.2015.2439281).
